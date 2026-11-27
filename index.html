@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WareFlow — Warehouse Picking Optimization</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="side" aria-label="Primary">
+  <div class="brand"><b>WareFlow</b><small id="co"></small></div>
+  <nav id="nav"></nav>
+</aside>
+<div id="shade"></div>
+<div class="main">
+  <header>
+    <button id="menu" class="btn" aria-label="Toggle navigation">Menu</button>
+    <input id="gsearch" type="search" placeholder="Search orders, customers, SKUs, locations…" aria-label="Global search">
+  </header>
+  <main id="view" tabindex="-1"></main>
+</div>
+<div id="modal" class="overlay" hidden>
+  <div class="box" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+    <h2 id="mtitle"></h2>
+    <form id="mform" novalidate>
+      <div id="mbody"></div>
+      <div id="merr" class="err" role="alert"></div>
+      <div class="actions">
+        <button type="button" class="btn" data-act="mclose">Close</button>
+        <button type="submit" class="btn pri" id="mok">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<noscript>WareFlow needs JavaScript enabled.</noscript>
+<script src="script.js"></script>
+</body>
+</html>
